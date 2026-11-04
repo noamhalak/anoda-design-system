@@ -1,0 +1,11 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size--4);
+  padding: var(--size--4) var(--size--8);
+  border-radius: var(--anoda-radius-4);
+  background: var(--anoda-bg-brand-muted);
+  color: var(--anoda-text-brand);
+  font: 700 12px/16px var(--anoda-font-family);
+  white-space: nowrap;
+}

@@ -1,0 +1,102 @@
+/*
+ * Anoda design tokens.
+ * Primitive names match the Webflow variables on anoda.co.il so values can be copied 1:1.
+ * Mirrors the Figma library "Design-system" (collections: Primitives, Color, Spacing, Radius).
+ */
+:root {
+  /* ---------- Primitives ---------- */
+  --purple--30-primary: #7439cc;
+  --purple--40: #ad83eb;
+  --purple--50: #dac2ff;
+  --purple--60: #e6d6ff;
+  --purple--70: #f3ebff;
+
+  --neutrals--10-black: #121114;
+  --neutrals--20: #423f47;
+  --neutrals--30: #605c66;
+  --neutrals--40: #afa9b8;
+  --neutrals--50: #cec9d6;
+  --neutrals--60: #e5e1eb;
+  --neutrals--70: #f7f5fa;
+  --neutrals--100-white: #ffffff;
+  --neutrals--transparent: #0000;
+  --transparent--natural-0-48: #1211147a;
+
+  --white-alpha--16: rgb(255 255 255 / 0.16);
+  --white-alpha--24: rgb(255 255 255 / 0.24);
+  --white-alpha--40: rgb(255 255 255 / 0.4);
+  --green--success-bg: #ddf0d8;
+  --green--success-text: #2b661d;
+
+  /* ---------- Semantic colour ---------- */
+  --anoda-bg-page: var(--neutrals--70);
+  --anoda-bg-surface: var(--neutrals--100-white);
+  --anoda-bg-subtle: var(--neutrals--70);
+  --anoda-bg-neutral-hover: var(--neutrals--60);
+  --anoda-bg-brand: var(--purple--30-primary);
+  --anoda-bg-brand-subtle: var(--purple--70);
+  --anoda-bg-brand-muted: var(--purple--60);
+  --anoda-bg-brand-hover: var(--purple--50);
+  --anoda-bg-brand-glow: var(--purple--40);
+  --anoda-bg-on-brand: var(--white-alpha--16);
+  --anoda-bg-on-brand-hover: var(--white-alpha--24);
+  --anoda-bg-glass: var(--white-alpha--40);
+  --anoda-bg-overlay: var(--transparent--natural-0-48);
+  --anoda-bg-success: var(--green--success-bg);
+
+  --anoda-text-primary: var(--neutrals--10-black);
+  --anoda-text-secondary: var(--neutrals--20);
+  --anoda-text-tertiary: var(--neutrals--30);
+  --anoda-text-disabled: var(--neutrals--40);
+  --anoda-text-placeholder: var(--neutrals--40);
+  --anoda-text-brand: var(--purple--30-primary);
+  --anoda-text-on-brand: var(--neutrals--100-white);
+  --anoda-text-success: var(--green--success-text);
+
+  --anoda-border-subtle: var(--neutrals--70);
+  --anoda-border-default: var(--neutrals--60);
+  --anoda-border-strong: var(--neutrals--50);
+  --anoda-border-brand: var(--purple--30-primary);
+  --anoda-border-brand-soft: var(--purple--40);
+  --anoda-border-focus-ring: var(--purple--60);
+  --anoda-border-on-brand: var(--white-alpha--16);
+
+  /* ---------- Spacing (Webflow --size--*) ---------- */
+  --size--4: 4px;
+  --size--6: 6px;
+  --size--8: 8px;
+  --size--12: 12px;
+  --size--16: 16px;
+  --size--24: 24px;
+  --size--28: 28px;
+  --size--32: 32px;
+  --size--40: 40px;
+  --size--48: 48px;
+  --size--56: 56px;
+
+  /* ---------- Radius ---------- */
+  --anoda-radius-4: 4px;
+  --anoda-radius-8: 8px;
+  --anoda-radius-12: 12px;
+  --anoda-radius-16: 16px;
+  --anoda-radius-48: 48px;
+  --anoda-radius-full: 100px;
+
+  /* ---------- Typography (Google Sans 400/700) ---------- */
+  --anoda-font-family: 'Google Sans', 'Arial', sans-serif;
+  --anoda-font-weight-regular: 400;
+  --anoda-font-weight-medium: 500;
+  --anoda-font-weight-bold: 700;
+
+  /* ---------- Effects ---------- */
+  --anoda-shadow-card-hover: 0 4px 24px -8px var(--neutrals--50);
+  --anoda-shadow-button-glow: 0 4px 12px 0 var(--purple--40);
+  --anoda-shadow-floating-chip: 0 0 4px 0 rgb(0 0 0 / 0.08);
+
+  --anoda-gradient-brand: radial-gradient(circle farthest-corner at 50% 0%, var(--purple--40), var(--purple--30-primary));
+  --anoda-gradient-tile: radial-gradient(circle farthest-corner at 50% 0%, #fcfaff, var(--purple--60));
+  --anoda-gradient-tile-on-brand: radial-gradient(circle at 50% 0, #fff, rgb(255 255 255 / 0.32));
+
+  --anoda-ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --anoda-duration: 350ms;
+}

@@ -1,0 +1,11 @@
+/* Optional page base. Import if the app has no reset of its own. */
+.anoda-root,
+:root:where([data-anoda]) body {
+  margin: 0;
+  background: var(--anoda-bg-page);
+  color: var(--anoda-text-primary);
+  font: 400 16px/24px var(--anoda-font-family);
+  direction: rtl;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+}

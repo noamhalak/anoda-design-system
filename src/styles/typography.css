@@ -1,0 +1,23 @@
+/* Text styles — names match the Figma text styles (Desktop/*, Mobile/*, Body/*, Label/*). */
+.anoda-display { font: 700 92px/92px var(--anoda-font-family); }
+.anoda-h1 { font: 700 64px/72px var(--anoda-font-family); }
+.anoda-h2 { font: 700 48px/56px var(--anoda-font-family); }
+.anoda-h3 { font: 700 40px/48px var(--anoda-font-family); }
+.anoda-h4 { font: 700 32px/40px var(--anoda-font-family); }
+.anoda-section-title { font: 700 28px/36px var(--anoda-font-family); }
+.anoda-h5 { font: 700 24px/32px var(--anoda-font-family); }
+.anoda-p1 { font: 400 18px/28px var(--anoda-font-family); }
+.anoda-p1-bold { font: 700 18px/28px var(--anoda-font-family); }
+.anoda-p2 { font: 400 16px/24px var(--anoda-font-family); }
+.anoda-p2-bold { font: 700 16px/24px var(--anoda-font-family); }
+.anoda-p3 { font: 400 14px/20px var(--anoda-font-family); }
+.anoda-p3-bold { font: 700 14px/20px var(--anoda-font-family); }
+.anoda-caption-bold { font: 700 12px/16px var(--anoda-font-family); }
+
+@media (max-width: 479px) {
+  .anoda-h2 { font-size: 40px; line-height: 40px; }
+  .anoda-h3 { font-size: 28px; line-height: 36px; }
+  .anoda-h4 { font-size: 28px; line-height: 32px; }
+  .anoda-h5 { font-size: 18px; line-height: 24px; }
+  .anoda-p1, .anoda-p1-bold { font-size: 16px; line-height: 24px; }
+}

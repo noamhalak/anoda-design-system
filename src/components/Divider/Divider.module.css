@@ -1,0 +1,4 @@
+.divider { border: 0; margin: 0; background: var(--anoda-border-subtle); flex: none; }
+.horizontal { height: 1px; width: 100%; }
+.vertical { width: 1px; align-self: stretch; }
+.onBrand { background: var(--anoda-border-on-brand); }

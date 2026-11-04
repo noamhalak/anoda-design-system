@@ -1,0 +1,50 @@
+{
+  "name": "anoda-design-system",
+  "version": "1.0.0",
+  "description": "Anoda design system — React + TypeScript components and tokens mirroring the anoda.co.il Figma library (RTL, Hebrew-first).",
+  "type": "module",
+  "main": "./dist/anoda-ui.js",
+  "module": "./dist/anoda-ui.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/anoda-ui.js"
+    },
+    "./styles.css": "./dist/anoda-ui.css",
+    "./tokens.css": "./src/styles/tokens.css",
+    "./base.css": "./src/styles/base.css"
+  },
+  "files": [
+    "dist",
+    "src/styles",
+    "public/favicon.svg",
+    "CLAUDE.md",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

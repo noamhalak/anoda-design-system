@@ -1,0 +1,16 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: var(--size--6);
+  box-sizing: border-box;
+  border: 0;
+  border-radius: var(--anoda-radius-8);
+  background: var(--anoda-bg-glass);
+  box-shadow: var(--anoda-shadow-floating-chip);
+  color: var(--anoda-text-primary);
+  backdrop-filter: blur(6px);
+}
+a.chip:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }
