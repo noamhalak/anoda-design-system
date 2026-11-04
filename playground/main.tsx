@@ -21,6 +21,26 @@ import {
   TabButton,
   Tag,
   TopNavigation,
+  ActionBanner,
+  ActiveFilterChip,
+  BookCard,
+  DetailHeader,
+  EmptyState,
+  EventCard,
+  ExpertItem,
+  FeatureBanner,
+  Footer,
+  InfoBanner,
+  InfoCard,
+  PortfolioCard,
+  SalaryCard,
+  ShareRow,
+  StudyProgramCard,
+  TeamCard,
+  Toggle,
+  TopToolItem,
+  TopToolsStrip,
+  TrendBadge,
 } from '../src';
 
 const cards = [
@@ -97,6 +117,54 @@ function Playground() {
             <Button variant="ghost-neutral">נקה</Button>
           </div>
 
+
+          <PageHeaderBanner icon="briefcase" title="תיקי עבודות" description="מאגר תיקי עבודות של אנשי מקצוע מתחום חווית המשתמש בישראל" action={<Button variant="secondary" icon="suggest">הגשת תיק עבודות</Button>} />
+          <FeatureBanner title="מנטורינג לבניית תיק עבודות" badge="חינם" action={<Button variant="secondary" icon="arrow-left">הצטרפות לתוכנית</Button>}>
+            צריכים עזרה בבניית תיק עבודות? נסו את תוכנית המנטורינג של Startup Designers.
+          </FeatureBanner>
+          <div className="pg-grid">
+            <PortfolioCard name="Daniel gur arye" experience="2-4 שנות ניסיון" builtWith="Claude Code" tags={['עיצוב', 'אפיון', 'בינה מלאכותית']} href="#" externalHref="https://www.anoda.co.il" />
+            <PortfolioCard type="cv" name="Eden Basri" experience="0-2 שנות ניסיון" tags={['עיצוב', 'מחקר']} href="#" />
+            <InfoCard href="#" title="Kombai" description="Kombai הוא כלי AI שעוזר לעצב ולבנות ממשקים." meta="גרסא חינמית" />
+          </div>
+          <EventCard promoted title="ProductX 2026" source="ProductX" date="29 ב- דצמבר" time="09:00" location="פיזי + אונליין" price="החל מ- 880 ₪" href="#" />
+          <EventCard title="מעגלי שיח בסילברפורט" source="WDYT" date="08 ב- נובמבר" time="18:00" location="אירוע פיזי" price="חינם" href="#" />
+          <div className="pg-cols2">
+            <BookCard title="מעבר לפיקסלים – צגים, תצוגות, UX והנדסת אנוש" description="כיצד העין האנושית מפרשת צבע על גבי מסך?" author="Ofer Moran, Ph.D." meta="2024 • מודפס • דיגיטלי" tags={['פסיכולוגיה', 'נגישות']} href="#" />
+            <StudyProgramCard title="AI Product Design Masterclass" school="ux.ui.dan" kind="קורס" location="אונליין" admission="יש תנאי קבלה" discount tags={['עיצוב', 'כלים']} href="#" />
+          </div>
+          <SectionCard>
+            <SectionHeader icon="info" title="סקר שכר 2026" subtitle="UXI LIVE" />
+            <div className="pg-grid">
+              <SalaryCard role="🖋️ מעצב.ת מוצר" roleEn="Product Designer" salary="₪25,955" trend="up" change="3.4% ↑" />
+              <SalaryCard role="🐥 מעצב.ת ג׳וניור" roleEn="Junior PD" salary="₪11,873" trend="down" change="13% ↓" />
+              <SalaryCard role="🧩 דיזיין סיסטם" roleEn="Design System" salary="₪24,381" trend="new" change="חדש" />
+            </div>
+          </SectionCard>
+          <TopToolsStrip>
+            {['Figma', 'Miro', 'lovable', 'Mixpanel', 'Framer', 'Mobbin'].map((n) => <TopToolItem key={n} name={n} href="#" />)}
+          </TopToolsStrip>
+          <SectionCard>
+            <InfoBanner>💡 anoda - לעלות / להתרומם (ביוונית - ανοδα)</InfoBanner>
+            <div className="pg-grid">
+              <TeamCard name="עומר אבירם" job="מעצב מוצר" company="Similarweb" bio="מעל 7 שנות ניסיון בעבודה בחברות מוצר." linkedin="https://www.linkedin.com" email="anoda.ux@gmail.com" />
+              <ExpertItem name="טל סולומון" org="MTA, Riskified" />
+            </div>
+          </SectionCard>
+          <div className="pg-detail">
+            <DetailHeader breadcrumb="תוכן / פוסטים ומאמרים" title="עיצוב תנועה ואנימציות בעידן של סוכני AI" source="The Portfolio Club" meta="3 דק׳ • 18.10.26 • 🇮🇱" />
+            <div className="pg-detail-body">
+              <ActionBanner action={<IconButton variant="primary-gradient" icon="external-link" label="פתיחה במקור" />}>לקריאת הפוסט</ActionBanner>
+              <ShareRow url="https://www.anoda.co.il" />
+            </div>
+          </div>
+          <div className="pg-row">
+            <ActiveFilterChip>בינה מלאכותית</ActiveFilterChip>
+            <Toggle>הנחות</Toggle>
+            <Toggle defaultChecked>התמחות</Toggle>
+            <TrendBadge trend="up">3.4% ↑</TrendBadge>
+          </div>
+          <EmptyState />
           <SectionCard className="pg-gallery">
             <h2 className="anoda-h5">Components</h2>
             <div className="pg-row">
@@ -126,6 +194,7 @@ function Playground() {
               <Checkbox>אפיון</Checkbox>
             </div>
           </SectionCard>
+          <Footer categories={[{ label: 'בינה מלאכותית', href: '#' }, { label: 'עיצוב', href: '#' }, { label: 'מחקר', href: '#' }, { label: 'נגישות', href: '#' }]} />
         </main>
       </div>
     </div>

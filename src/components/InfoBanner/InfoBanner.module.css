@@ -1,0 +1,7 @@
+.banner {
+  padding: var(--size--12) var(--size--16);
+  border-radius: var(--anoda-radius-12);
+  background: var(--anoda-bg-subtle);
+  color: var(--anoda-text-primary);
+  font: 400 18px/28px var(--anoda-font-family);
+}

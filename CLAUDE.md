@@ -15,7 +15,7 @@ This repo is the code version of the Anoda design system (anoda.co.il). It mirro
 - Each component = one folder: `Component.tsx` + `Component.module.css` + `index.ts`, exported from `src/index.ts`, and shown in `playground/main.tsx`.
 
 ## When you change or add a component
-1. Check the matching component in the Figma file (pages: Buttons, Tags & Labels, Navigation, Cards, Forms) and keep names, variants and values in sync.
+1. Check the matching component in the Figma file (pages: Buttons, Tags & Labels, Navigation, Cards, Forms, Sections; page layouts are on Templates) and keep names, variants and values in sync.
 2. Add it to the playground and check it at 1440px and 375px.
 3. Run `npm run typecheck && npm run build` before committing.
 

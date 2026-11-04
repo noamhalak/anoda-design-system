@@ -1,0 +1,14 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size--8);
+  padding: var(--size--40);
+  border-radius: var(--anoda-radius-16);
+  background: var(--anoda-bg-surface);
+  box-shadow: inset 0 0 0 1px var(--anoda-border-subtle);
+  color: var(--anoda-text-tertiary);
+  font: 400 18px/28px var(--anoda-font-family);
+  text-align: center;
+}
+.emoji { font-size: 32px; line-height: 40px; }

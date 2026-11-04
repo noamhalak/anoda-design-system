@@ -1,0 +1,6 @@
+.item { display: flex; flex-direction: column; align-items: center; gap: var(--size--8); padding: var(--size--6); border-radius: var(--anoda-radius-8); color: var(--anoda-text-primary); text-decoration: none; }
+.item:hover { background: var(--anoda-bg-subtle); }
+.item:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }
+.name { font: 700 18px/28px var(--anoda-font-family); }
+.strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--size--16); padding: var(--size--8); border-radius: var(--anoda-radius-12); background: var(--anoda-bg-surface); }
+@media (max-width: 767px) { .strip { display: flex; overflow-x: auto; scrollbar-width: none; } .strip > * { flex: 0 0 120px; } }

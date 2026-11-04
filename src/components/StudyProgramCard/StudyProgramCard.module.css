@@ -1,0 +1,23 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size--12);
+  padding: var(--size--16);
+  border: 1px solid var(--anoda-border-subtle);
+  border-radius: var(--anoda-radius-16);
+  background: var(--anoda-bg-surface);
+  transition: box-shadow 400ms var(--anoda-ease);
+}
+.card:hover { box-shadow: var(--anoda-shadow-card-hover); }
+.header { display: flex; align-items: center; gap: var(--size--12); }
+.titleCol { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.sourceRow { display: flex; align-items: center; justify-content: space-between; gap: var(--size--8); }
+.school { font: 400 14px/20px var(--anoda-font-family); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badges { display: inline-flex; gap: var(--size--4); }
+.title { margin: 0; font: 700 18px/28px var(--anoda-font-family); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta { display: flex; flex-wrap: wrap; gap: var(--size--16); font: 400 14px/20px var(--anoda-font-family); }
+.meta span { display: inline-flex; align-items: center; gap: var(--size--4); }
+.tags { display: flex; gap: var(--size--8); flex-wrap: wrap; }
+.link { position: absolute; inset: 0; border-radius: inherit; }
+.link:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }

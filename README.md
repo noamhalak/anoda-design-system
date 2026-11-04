@@ -9,12 +9,13 @@ The code mirrors the Figma library: [Design-system](https://www.figma.com/design
 | **Tokens** | `src/styles/tokens.css` — colours (Webflow names + semantic `--anoda-*`), spacing `--size--*`, radius, shadows, gradients. JS refs in `src/tokens`. |
 | **Typography** | `src/styles/typography.css` — `.anoda-display`, `.anoda-h1`…`.anoda-h5`, `.anoda-p1`…`.anoda-p3(-bold)`, `.anoda-caption-bold` (mobile sizes ≤479px). |
 | **Brand** | `Logo` (default / white), `Favicon`, `public/favicon.svg` |
-| **Icons** | `Icon` — 24 stroke icons (`home`, `search`, `arrow-left`, `article`, `calendar`, …) |
+| **Icons** | `Icon` — 36 stroke icons (`home`, `search`, `arrow-left`, `article`, `calendar`, …) |
 | **Actions** | `Button` (9 variants), `IconButton`, `SearchPillButton` |
-| **Labels** | `Tag` (sm / lg), `Badge`, `SourceTypeLabel`, `MediaChip`, `Divider` |
+| **Labels** | `Tag` (sm / lg), `Badge` (purple / grey / solid), `TrendBadge`, `SourceTypeLabel`, `MediaChip`, `Thumbnail`, `Divider` |
 | **Navigation** | `TopNavigation`, `SideNavigation` + `SideNavLink`, `TabButton`, `SearchField` |
-| **Content** | `ContentCard`, `ContentListItem`, `SectionCard` + `SectionHeader`, `PageHeaderBanner` |
-| **Forms** | `InputField`, `TextAreaField`, `DropdownField`, `Checkbox` |
+| **Content** | `ContentCard`, `ContentListItem`, `PortfolioCard` (portfolio / cv), `InfoCard`, `BookCard`, `StudyProgramCard`, `EventCard` + `EventDataItem`, `SalaryCard`, `TopToolItem` + `TopToolsStrip`, `TeamCard`, `ExpertItem` |
+| **Sections** | `SectionCard` + `SectionHeader`, `PageHeaderBanner` (optional `action`), `FeatureBanner`, `InfoBanner`, `DetailHeader` + `ActionBanner`, `ShareRow`, `EmptyState`, `Footer` + `FooterLink` |
+| **Forms** | `InputField`, `TextAreaField`, `DropdownField`, `Checkbox`, `Toggle`, `ActiveFilterChip` |
 
 ## Use it in another project
 ```bash

@@ -1,0 +1,15 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size--4);
+  padding-block: var(--size--4);
+  padding-inline: var(--size--12) var(--size--8);
+  border: 0;
+  border-radius: var(--anoda-radius-full);
+  background: var(--anoda-bg-brand-subtle);
+  color: var(--anoda-text-brand);
+  font: 700 14px/20px var(--anoda-font-family);
+  cursor: pointer;
+}
+.chip:hover { background: var(--anoda-bg-brand-hover); }
+.chip:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }

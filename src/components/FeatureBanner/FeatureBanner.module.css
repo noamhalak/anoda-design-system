@@ -1,0 +1,8 @@
+.banner { display: grid; grid-template-columns: 2fr 1fr; gap: var(--size--24); align-items: center; padding: var(--size--16); border-radius: var(--anoda-radius-16); background: var(--anoda-bg-surface); }
+.noImage { grid-template-columns: 1fr; }
+.content { display: flex; flex-direction: column; gap: var(--size--12); }
+.titleRow { display: flex; align-items: center; gap: var(--size--8); flex-wrap: wrap; }
+.title { margin: 0; font: 700 28px/36px var(--anoda-font-family); }
+.text { font: 400 16px/24px var(--anoda-font-family); }
+.image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--anoda-radius-12); }
+@media (max-width: 767px) { .banner { grid-template-columns: 1fr; } .image { order: -1; } }

@@ -1,0 +1,13 @@
+.card { display: flex; flex-direction: column; gap: var(--size--16); padding: var(--size--16); border-radius: var(--anoda-radius-12); background: var(--anoda-bg-subtle); }
+.header { display: flex; align-items: center; gap: var(--size--16); }
+.photo { flex: none; width: 56px; height: 56px; border-radius: var(--anoda-radius-8); background: var(--anoda-bg-neutral-hover); object-fit: cover; }
+.name { font: 700 18px/28px var(--anoda-font-family); }
+.role { display: flex; align-items: center; gap: var(--size--4); font: 400 14px/20px var(--anoda-font-family); }
+.logo { width: 20px; height: 20px; border-radius: 50%; background: var(--anoda-bg-neutral-hover); object-fit: cover; }
+.divider { background: var(--anoda-border-default); }
+.bio { margin: 0; font: 400 14px/20px var(--anoda-font-family); white-space: pre-line; }
+.actions { display: flex; gap: var(--size--8); }
+.expert { display: flex; align-items: center; gap: var(--size--12); }
+.expertPhoto { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--anoda-bg-neutral-hover); object-fit: cover; }
+.expertName { font: 700 16px/24px var(--anoda-font-family); }
+.expertOrg { font: 400 14px/20px var(--anoda-font-family); color: var(--anoda-text-tertiary); }

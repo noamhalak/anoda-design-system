@@ -7,10 +7,12 @@ export interface PageHeaderBannerProps extends Omit<HTMLAttributes<HTMLElement>,
   title: ReactNode;
   description?: ReactNode;
   icon: IconName;
+  /** Optional CTA at the end, e.g. "הגשת תיק עבודות" on /portfolios. */
+  action?: ReactNode;
 }
 
 /** `.content-card-container.page-header` — purple banner at the top of listing pages. */
-export function PageHeaderBanner({ title, description, icon, className, ...rest }: PageHeaderBannerProps) {
+export function PageHeaderBanner({ title, description, icon, action, className, ...rest }: PageHeaderBannerProps) {
   return (
     <header className={cx(styles.banner, className)} {...rest}>
       <span className={styles.tile}>
@@ -20,6 +22,7 @@ export function PageHeaderBanner({ title, description, icon, className, ...rest 
         <h1 className={styles.title}>{title}</h1>
         {description && <p className={styles.description}>{description}</p>}
       </div>
+      {action && <div className={styles.action}>{action}</div>}
     </header>
   );
 }
