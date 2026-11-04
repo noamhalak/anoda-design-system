@@ -24,6 +24,7 @@
 .description a { color: inherit; }
 @media (max-width: 479px) {
   .tile { width: 48px; height: 48px; border-radius: var(--anoda-radius-8); }
+  .tile svg { width: 28px; height: 28px; }
   .title { font-size: 40px; line-height: 40px; }
 }
 .action { flex: none; }

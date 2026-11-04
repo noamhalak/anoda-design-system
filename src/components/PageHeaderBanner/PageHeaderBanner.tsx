@@ -16,7 +16,7 @@ export function PageHeaderBanner({ title, description, icon, action, className, 
   return (
     <header className={cx(styles.banner, className)} {...rest}>
       <span className={styles.tile}>
-        <Icon name={icon} size={24} />
+        <Icon name={icon} size={40} />
       </span>
       <div className={styles.text}>
         <h1 className={styles.title}>{title}</h1>
