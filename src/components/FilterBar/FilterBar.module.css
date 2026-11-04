@@ -1,5 +1,7 @@
 .bar { display: flex; flex-direction: column; gap: var(--size--16); }
-.controls { display: flex; align-items: center; gap: var(--size--8); padding-bottom: var(--size--16); border-bottom: 1px solid var(--anoda-border-default); }
+/* Controls + optional `below` row; the divider sits under both. */
+.top { display: flex; flex-direction: column; gap: var(--size--16); padding-bottom: var(--size--16); border-bottom: 1px solid var(--anoda-border-default); }
+.controls { display: flex; align-items: center; gap: var(--size--8); }
 .search { display: flex; align-items: center; gap: var(--size--8); flex: 0 1 360px; min-width: 200px; min-height: 42px; box-sizing: border-box; padding: var(--size--8) var(--size--16); border: 1px solid var(--anoda-border-default); border-radius: var(--anoda-radius-8); color: var(--anoda-text-primary); }
 .search:hover, .search:focus-within { background: var(--anoda-bg-subtle); }
 .search:focus-within { border-color: var(--anoda-border-brand); }
@@ -12,12 +14,13 @@
 .clear:hover { background: var(--anoda-bg-subtle); }
 .clear:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }
 .results { display: flex; align-items: center; gap: var(--size--16); }
-.count { font: 400 16px/24px var(--anoda-font-family); color: var(--anoda-text-disabled); }
+/* Chips at the start, count pinned to the end (left), as in Figma. */
+.count { margin-inline-start: auto; font: 400 16px/24px var(--anoda-font-family); color: var(--anoda-text-disabled); }
 .count strong { font-weight: 400; color: var(--anoda-text-primary); }
 .chips { display: flex; flex-wrap: wrap; gap: var(--size--8); }
 .mobileTrigger { display: none; }
 @media (max-width: 479px) {
-  .controls { padding-bottom: 0; border-bottom: 0; }
+  .top { padding-bottom: 0; border-bottom: 0; }
   .filters, .clearBtn { display: none; }
   .search { flex: 1; }
   .mobileTrigger { position: fixed; inset: auto 0 0; z-index: 30; display: flex; align-items: center; justify-content: center; gap: var(--size--8); padding: var(--size--12) var(--size--16); border: 0; border-top: 1px solid var(--anoda-border-subtle); background: var(--anoda-bg-surface); color: var(--anoda-text-primary); font: 400 16px/24px var(--anoda-font-family); cursor: pointer; }

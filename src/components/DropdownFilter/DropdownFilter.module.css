@@ -18,7 +18,6 @@
 .open, .open:hover { background: var(--anoda-bg-subtle); border-color: var(--anoda-border-brand); }
 .trigger:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }
 .label { flex: 1; text-align: start; }
-.count { min-width: 20px; padding: 0 var(--size--6); border-radius: var(--anoda-radius-full); background: var(--anoda-bg-brand); color: var(--anoda-text-on-brand); font: 700 12px/20px var(--anoda-font-family); text-align: center; }
 .chevron { transition: transform var(--anoda-duration) var(--anoda-ease); }
 .open .chevron { transform: rotate(180deg); }
 .menu {

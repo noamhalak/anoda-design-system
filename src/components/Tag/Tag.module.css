@@ -18,7 +18,8 @@
 .lg { gap: var(--size--8); padding: var(--size--8) var(--size--12); }
 .icon { flex: none; color: var(--anoda-text-brand); display: inline-flex; }
 .icon img { width: 20px; height: 20px; object-fit: contain; }
-a.tag:hover, button.tag:hover { background: var(--anoda-bg-subtle); }
+/* Hover on anything clickable — links, buttons, and spans with role="button" (e.g. removable filter tags). */
+a.tag:hover, button.tag:hover, .tag[role='button']:hover { background: var(--anoda-bg-subtle); }
 .tag:focus-visible { outline: 3px solid var(--anoda-border-focus-ring); outline-offset: 2px; }
 button.tag { border: 0; cursor: pointer; }
 @media (max-width: 479px) {

@@ -23,6 +23,8 @@ export interface FilterBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'on
   /** DropdownFilter elements (and optional Toggles). */
   filters?: ReactNode;
   onClear?: () => void;
+  /** Extra row under the controls, above the divider (e.g. an A–Z letter index). */
+  below?: ReactNode;
   /** Applied filters — usually ActiveFilterChip elements. */
   activeFilters?: ReactNode;
   shown?: number;
@@ -32,25 +34,28 @@ export interface FilterBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'on
 }
 
 /** Listing filter bar (.cms-filters-form-container): search, filter dropdowns, clear; divider; chips + count. */
-export function FilterBar({ query, onQueryChange, searchPlaceholder = 'חיפוש', filters, onClear, activeFilters, shown, total, onOpenMobileFilters, className, ...rest }: FilterBarProps) {
+export function FilterBar({ query, onQueryChange, searchPlaceholder = 'חיפוש', filters, onClear, below, activeFilters, shown, total, onOpenMobileFilters, className, ...rest }: FilterBarProps) {
   const submit = (e: FormEvent) => e.preventDefault();
   return (
     <div className={cx(styles.bar, className)} {...rest}>
-      <form role="search" className={styles.controls} onSubmit={submit}>
-        <label className={styles.search}>
-          <Icon name="search" size={24} />
-          <input type="search" aria-label={searchPlaceholder} placeholder={searchPlaceholder} value={query} onChange={(e) => onQueryChange?.(e.target.value)} />
-        </label>
-        <div className={styles.filters}>{filters}</div>
-        {onClear && <ClearFiltersButton className={styles.clearBtn} onClick={onClear} />}
-      </form>
+      <div className={styles.top}>
+        <form role="search" className={styles.controls} onSubmit={submit}>
+          <label className={styles.search}>
+            <Icon name="search" size={24} />
+            <input type="search" aria-label={searchPlaceholder} placeholder={searchPlaceholder} value={query} onChange={(e) => onQueryChange?.(e.target.value)} />
+          </label>
+          <div className={styles.filters}>{filters}</div>
+          {onClear && <ClearFiltersButton className={styles.clearBtn} onClick={onClear} />}
+        </form>
+        {below}
+      </div>
       <div className={styles.results}>
+        {activeFilters && <div className={styles.chips}>{activeFilters}</div>}
         {total !== undefined && (
           <span className={styles.count} aria-live="polite">
             <strong>{shown ?? total}</strong> / {total}
           </span>
         )}
-        {activeFilters && <div className={styles.chips}>{activeFilters}</div>}
       </div>
       {onOpenMobileFilters && (
         <button type="button" className={styles.mobileTrigger} onClick={onOpenMobileFilters}>

@@ -65,7 +65,6 @@ export function DropdownFilter({ label, icon = 'filter', options, value, onChang
       <button type="button" className={cx(styles.trigger, open && styles.open)} aria-expanded={open} aria-controls={menuId} onClick={() => setOpen((o) => !o)}>
         <Icon name={icon} size={20} />
         <span className={styles.label}>{label}</span>
-        {value.length > 0 && <span className={styles.count}>{value.length}</span>}
         <Icon name="chevron-down" size={20} className={styles.chevron} />
       </button>
       {open && (
