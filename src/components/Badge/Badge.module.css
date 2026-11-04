@@ -9,3 +9,5 @@
   font: 700 12px/16px var(--anoda-font-family);
   white-space: nowrap;
 }
+.grey { background: var(--anoda-bg-subtle); color: var(--anoda-text-secondary); }
+.solid { background: var(--anoda-bg-brand); color: var(--anoda-text-on-brand); }

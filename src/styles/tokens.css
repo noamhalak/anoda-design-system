@@ -27,6 +27,11 @@
   --white-alpha--40: rgb(255 255 255 / 0.4);
   --green--success-bg: #ddf0d8;
   --green--success-text: #2b661d;
+  --green--trend-bg: rgb(58 214 34 / 0.2);
+  --green--trend-text: #0d6600;
+  --red--trend-bg: #feeaea;
+  --red--trend-text: #b81616;
+  --neutrals--footer: #f3f0f7;
 
   /* ---------- Semantic colour ---------- */
   --anoda-bg-page: var(--neutrals--70);
@@ -43,6 +48,9 @@
   --anoda-bg-glass: var(--white-alpha--40);
   --anoda-bg-overlay: var(--transparent--natural-0-48);
   --anoda-bg-success: var(--green--success-bg);
+  --anoda-bg-positive: var(--green--trend-bg);
+  --anoda-bg-negative: var(--red--trend-bg);
+  --anoda-bg-footer: var(--neutrals--footer);
 
   --anoda-text-primary: var(--neutrals--10-black);
   --anoda-text-secondary: var(--neutrals--20);
@@ -52,6 +60,8 @@
   --anoda-text-brand: var(--purple--30-primary);
   --anoda-text-on-brand: var(--neutrals--100-white);
   --anoda-text-success: var(--green--success-text);
+  --anoda-text-positive: var(--green--trend-text);
+  --anoda-text-negative: var(--red--trend-text);
 
   --anoda-border-subtle: var(--neutrals--70);
   --anoda-border-default: var(--neutrals--60);
@@ -95,6 +105,7 @@
 
   --anoda-gradient-brand: radial-gradient(circle farthest-corner at 50% 0%, var(--purple--40), var(--purple--30-primary));
   --anoda-gradient-tile: radial-gradient(circle farthest-corner at 50% 0%, #fcfaff, var(--purple--60));
+  --anoda-gradient-event-promoted: radial-gradient(circle at 100% 50%, var(--purple--50), var(--neutrals--100-white) 60%);
   --anoda-gradient-tile-on-brand: radial-gradient(circle at 50% 0, #fff, rgb(255 255 255 / 0.32));
 
   --anoda-ease: cubic-bezier(0.215, 0.61, 0.355, 1);

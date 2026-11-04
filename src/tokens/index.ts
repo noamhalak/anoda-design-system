@@ -31,6 +31,9 @@ export const colorBg = {
   glass: v('anoda-bg-glass'),
   overlay: v('anoda-bg-overlay'),
   success: v('anoda-bg-success'),
+  positive: v('anoda-bg-positive'),
+  negative: v('anoda-bg-negative'),
+  footer: v('anoda-bg-footer'),
 } as const;
 
 export const colorText = {
@@ -42,6 +45,8 @@ export const colorText = {
   brand: v('anoda-text-brand'),
   onBrand: v('anoda-text-on-brand'),
   success: v('anoda-text-success'),
+  positive: v('anoda-text-positive'),
+  negative: v('anoda-text-negative'),
 } as const;
 
 export const colorBorder = {
