@@ -8,9 +8,7 @@ import {
   Checkbox,
   ContentCard,
   ContentListItem,
-  DropdownField,
   IconButton,
-  InputField,
   PageHeaderBanner,
   SearchField,
   SectionCard,
@@ -41,6 +39,8 @@ import {
   TopToolItem,
   TopToolsStrip,
   TrendBadge,
+  DropdownFilter,
+  FilterBar,
 } from '../src';
 
 const cards = [
@@ -53,6 +53,9 @@ const cards = [
 function Playground() {
   const [menu, setMenu] = useState(false);
   const [tab, setTab] = useState('posts');
+  const [query, setQuery] = useState('');
+  const [cats, setCats] = useState<string[]>(['תיק עבודות']);
+  const [lang, setLang] = useState<string[]>([]);
   return (
     <div className="pg-shell">
       <TopNavigation fixed onMenuClick={() => setMenu((m) => !m)} />
@@ -110,12 +113,20 @@ function Playground() {
           </SectionCard>
 
           <PageHeaderBanner icon="article" title="כל התכנים" description="כל התכנים ממקורות מובילים בתחום • יש תוכן שלא נמצא במאגר? הציעו תוכן למאגר" />
-          <div className="pg-filters">
-            <InputField icon="search" placeholder="חיפוש" />
-            <DropdownField defaultValue=""><option value="">קטגוריה</option><option>בינה מלאכותית</option></DropdownField>
-            <DropdownField defaultValue=""><option value="">סוג תוכן</option><option>פודקאסט</option></DropdownField>
-            <Button variant="ghost-neutral">נקה</Button>
-          </div>
+          <FilterBar
+            query={query}
+            onQueryChange={setQuery}
+            filters={
+              <>
+                <DropdownFilter label="שפה" icon="globe" options={[{ value: 'he', label: 'עברית' }, { value: 'en', label: 'אנגלית' }]} value={lang} onChange={setLang} />
+                <DropdownFilter label="קטגוריה" icon="categories" searchable options={['חיפוש עבודה וראיונות', 'תיק עבודות', 'עיצוב', 'אפיון', 'מחקר', 'בינה מלאכותית'].map((l) => ({ value: l, label: l, icon: 'tag' as const }))} value={cats} onChange={setCats} />
+              </>
+            }
+            onClear={() => { setCats([]); setLang([]); setQuery(''); }}
+            activeFilters={cats.length ? cats.map((c) => <ActiveFilterChip key={c} onClick={() => setCats(cats.filter((x) => x !== c))}>{c}</ActiveFilterChip>) : undefined}
+            shown={cats.length ? 120 : 400}
+            total={400}
+          />
 
 
           <PageHeaderBanner icon="briefcase" title="תיקי עבודות" description="מאגר תיקי עבודות של אנשי מקצוע מתחום חווית המשתמש בישראל" action={<Button variant="secondary" icon="suggest">הגשת תיק עבודות</Button>} />

@@ -36,6 +36,8 @@ export const iconPaths = {
   'x-logo': '<path d="M4 4l16 16M20 4 4 20"/>',
   'check-circle': '<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
   download: '<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>',
+  categories: '<rect x="4" y="13" width="7" height="7" rx="1.5"/><circle cx="16.5" cy="16.5" r="3.5"/><path d="M7.5 4 11 10H4z"/><path d="M16.5 10.5s-3.5-2.2-3.5-4.5a1.8 1.8 0 0 1 3.5-.6 1.8 1.8 0 0 1 3.5.6c0 2.3-3.5 4.5-3.5 4.5z"/>',
+  'filter-off': '<path d="M4 5h16l-6 7.5V19l-4 1.5v-8z"/><path d="M3 3l18 18"/>',
 } as const;
 
 export type IconName = keyof typeof iconPaths;

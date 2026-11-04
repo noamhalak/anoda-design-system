@@ -41,3 +41,5 @@ export * from './components/Footer';
 export * from './components/FeatureBanner';
 export * from './components/DetailHeader';
 export * from './components/ShareRow';
+export * from './components/DropdownFilter';
+export * from './components/FilterBar';
