@@ -16,6 +16,7 @@ The code mirrors the Figma library: [Design-system](https://www.figma.com/design
 | **Content** | `ContentCard`, `ContentListItem`, `PortfolioCard` (portfolio / cv), `InfoCard`, `BookCard`, `StudyProgramCard`, `EventCard` + `EventDataItem`, `SalaryCard`, `TopToolItem` + `TopToolsStrip`, `TeamCard`, `ExpertItem` |
 | **Sections** | `SectionCard` + `SectionHeader`, `PageHeaderBanner` (optional `action`), `FeatureBanner`, `InfoBanner`, `DetailHeader` + `ActionBanner`, `ShareRow`, `EmptyState`, `Footer` + `FooterLink` |
 | **Forms** | `InputField`, `TextAreaField`, `DropdownField`, `Checkbox`, `Toggle`, `ActiveFilterChip`, `DropdownFilter` + `DropdownOption` (checkbox menu), `FilterBar` + `ClearFiltersButton` |
+| **Presentation** | `presentation/` — דיזיין סיסטם למצגת: the anoda slide-deck template as a Claude skill (layouts, RTL rules, logos). See `presentation/README.md`. |
 
 ## Use it in another project
 ```bash
